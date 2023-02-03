@@ -30,21 +30,7 @@ class HomeView: BaseView {
         
         return search
     }()
-    
-//    lazy var searchButton: UIButton = {
-//        let search = UIButton(type: .custom)
-//        search.setTitle("Search", for: .normal)
-//        search.titleLabel?.font = UIFont(name: "Montserrat", size: 0)
-//        search.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-//        search.setTitleColor(.black, for: .normal)
-//        search.layer.masksToBounds = true
-//        search.layer.cornerRadius = 20
-//        search.layer.borderWidth = 2
-//        search.layer.borderColor = UIColor.black.cgColor
-//
-//        return search
-//    }()
-    
+
     lazy var searchButton: UIButton = {
         let search = UIButton(type: .custom)
         search.setTitle("Search", for: .normal)

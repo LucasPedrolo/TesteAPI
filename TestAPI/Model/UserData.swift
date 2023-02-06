@@ -13,4 +13,6 @@ struct UserData: Codable {
     var reposUrl: String
     var name: String
     var publicRepos: Int
+    var followers: Int
+    var following: Int
 }

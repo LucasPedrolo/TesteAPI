@@ -20,6 +20,8 @@
 		4DB5F902298D369B00B5C7EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F901298D369B00B5C7EF /* HomeViewModel.swift */; };
 		4DB5F904298D70F500B5C7EF /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F903298D70F500B5C7EF /* UserDetailsViewController.swift */; };
 		4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */; };
+		4DB5F90829911B6400B5C7EF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */; };
+		4DB5F90A299120F000B5C7EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F909299120F000B5C7EF /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		4DB5F901298D369B00B5C7EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4DB5F903298D70F500B5C7EF /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		4DB5F909299120F000B5C7EF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				4DB5F8F7298AA92100B5C7EF /* UIView+Extension.swift */,
+				4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */,
+				4DB5F909299120F000B5C7EF /* UIColor+Extension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -244,9 +250,11 @@
 				4DB5F8F6298AA8E900B5C7EF /* HomeView.swift in Sources */,
 				4DB5F900298D33E800B5C7EF /* UserData.swift in Sources */,
 				4DB5F8DA298AA83800B5C7EF /* SceneDelegate.swift in Sources */,
+				4DB5F90829911B6400B5C7EF /* UIImageView+Extension.swift in Sources */,
 				4DB5F8FB298AA99E00B5C7EF /* BaseView.swift in Sources */,
 				4DB5F8F8298AA92100B5C7EF /* UIView+Extension.swift in Sources */,
 				4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */,
+				4DB5F90A299120F000B5C7EF /* UIColor+Extension.swift in Sources */,
 				4DB5F8F4298AA8BA00B5C7EF /* HomeViewController.swift in Sources */,
 				4DB5F8FE298D32C000B5C7EF /* API.swift in Sources */,
 			);

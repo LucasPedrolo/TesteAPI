@@ -96,19 +96,6 @@ class UserDetailsView: BaseView {
         return stack
     }()
     
-    lazy var emojiButton: UIButton = {
-        let emoji = UIButton(type: .custom)
-        let image = UIImage(named: "emoji")
-        emoji.setBackgroundImage(image, for: UIControl.State.normal)
-        emoji.layer.borderWidth = 1
-        emoji.layer.borderColor = UIColor.purple.cgColor
-        emoji.layer.cornerRadius = 10
-        emoji.backgroundColor = .white
-        
-        
-        return emoji
-    }()
-    
     override func addSubviews() {
         addSubview(view)
         view.addSubview(editButton)
@@ -120,14 +107,13 @@ class UserDetailsView: BaseView {
         stackView.addArrangedSubview(followersButton)
         stackView.addArrangedSubview(pointLabel)
         stackView.addArrangedSubview(followingButton)
-        view.addSubview(emojiButton)
     }
     
     override func setConstraints() {
         
         view.anchor(top: safeAreaLayoutGuide.topAnchor, leading: safeAreaLayoutGuide.leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: frame.width, height: frame.height))
         
-        image.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 45, bottom: 0, right: 0) , size: .init(width: 300, height: 300))
+        image.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: -0, left: 45, bottom: 0, right: 0) , size: .init(width: 300, height: 300))
         
         nameLabel.anchor(top: image.topAnchor, leading: image.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 320, left: 0, bottom: 0, right: 0), size: .init(width: 200, height: 20))
         
@@ -136,7 +122,5 @@ class UserDetailsView: BaseView {
         editButton.anchor(top: loginLabel.bottomAnchor, leading: loginLabel.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 15, left: 0, bottom: 0, right: 0), size: .init(width: 300, height: 35))
         
         stackView.anchor(top: editButton.bottomAnchor, leading: editButton.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 12, left: 0, bottom: 0, right: 0), size: .init(width: 210, height: 20))
-        
-        emojiButton.anchor(top: stackView.bottomAnchor, leading: stackView.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 1000, left: 0, bottom: 0, right: 0), size: .init(width: 150, height: 150))
     }
 }

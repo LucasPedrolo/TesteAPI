@@ -25,6 +25,12 @@ class UserDetailsViewController: UIViewController {
         view = userDetailsView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        API.shared.getRepos(url: self.homeData?.reposUrl ?? "") { repositories in
+            print(repositories)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelData()

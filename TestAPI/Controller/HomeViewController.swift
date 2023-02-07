@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     var homeView: HomeView = HomeView()
-    var viewModel: HomeViewModel = HomeViewModel()
     
     override func loadView() {
         view = homeView
@@ -24,7 +23,7 @@ class HomeViewController: UIViewController {
    @objc func getData() {
        let search = homeView.searchTxtField.text
        
-       viewModel.api.getData(searchText: search ?? "") { userData in
+       API.shared.getData(searchText: search ?? "") { userData in
            print(userData)
            
            DispatchQueue.main.async {
@@ -32,5 +31,5 @@ class HomeViewController: UIViewController {
                self.navigationController?.pushViewController(userDetails, animated: true)
            }
        }
-    }
+    } 
 }

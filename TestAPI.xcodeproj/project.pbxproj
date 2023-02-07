@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1ADDFB29926BB8001783C3 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ADDFA29926BB8001783C3 /* UserRepos.swift */; };
 		4DB5F8D8298AA83800B5C7EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8D7298AA83800B5C7EF /* AppDelegate.swift */; };
 		4DB5F8DA298AA83800B5C7EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8D9298AA83800B5C7EF /* SceneDelegate.swift */; };
 		4DB5F8E1298AA83900B5C7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5F8E0298AA83900B5C7EF /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		4DB5F8FB298AA99E00B5C7EF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8FA298AA99E00B5C7EF /* BaseView.swift */; };
 		4DB5F8FE298D32C000B5C7EF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8FD298D32C000B5C7EF /* API.swift */; };
 		4DB5F900298D33E800B5C7EF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8FF298D33E800B5C7EF /* UserData.swift */; };
-		4DB5F902298D369B00B5C7EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F901298D369B00B5C7EF /* HomeViewModel.swift */; };
 		4DB5F904298D70F500B5C7EF /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F903298D70F500B5C7EF /* UserDetailsViewController.swift */; };
 		4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */; };
 		4DB5F90829911B6400B5C7EF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */; };
@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D1ADDFA29926BB8001783C3 /* UserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		4DB5F8D4298AA83800B5C7EF /* TestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB5F8D7298AA83800B5C7EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB5F8D9298AA83800B5C7EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		4DB5F8FA298AA99E00B5C7EF /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4DB5F8FD298D32C000B5C7EF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4DB5F8FF298D33E800B5C7EF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		4DB5F901298D369B00B5C7EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4DB5F903298D70F500B5C7EF /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -110,7 +110,6 @@
 		4DB5F8ED298AA87400B5C7EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4DB5F901298D369B00B5C7EF /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB5F8FF298D33E800B5C7EF /* UserData.swift */,
+				4D1ADDFA29926BB8001783C3 /* UserRepos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,7 +246,6 @@
 			files = (
 				4DB5F904298D70F500B5C7EF /* UserDetailsViewController.swift in Sources */,
 				4DB5F8D8298AA83800B5C7EF /* AppDelegate.swift in Sources */,
-				4DB5F902298D369B00B5C7EF /* HomeViewModel.swift in Sources */,
 				4DB5F8F6298AA8E900B5C7EF /* HomeView.swift in Sources */,
 				4DB5F900298D33E800B5C7EF /* UserData.swift in Sources */,
 				4DB5F8DA298AA83800B5C7EF /* SceneDelegate.swift in Sources */,
@@ -256,6 +255,7 @@
 				4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */,
 				4DB5F90A299120F000B5C7EF /* UIColor+Extension.swift in Sources */,
 				4DB5F8F4298AA8BA00B5C7EF /* HomeViewController.swift in Sources */,
+				4D1ADDFB29926BB8001783C3 /* UserRepos.swift in Sources */,
 				4DB5F8FE298D32C000B5C7EF /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

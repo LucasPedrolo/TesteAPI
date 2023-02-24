@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D1ADDFB29926BB8001783C3 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ADDFA29926BB8001783C3 /* UserRepos.swift */; };
+		4D1ADE1E29928A1F001783C3 /* UserDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ADE1D29928A1F001783C3 /* UserDetailsViewCell.swift */; };
+		4D1ADE2029928A34001783C3 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ADE1F29928A34001783C3 /* BaseTableCell.swift */; };
 		4DB5F8D8298AA83800B5C7EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8D7298AA83800B5C7EF /* AppDelegate.swift */; };
 		4DB5F8DA298AA83800B5C7EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F8D9298AA83800B5C7EF /* SceneDelegate.swift */; };
 		4DB5F8E1298AA83900B5C7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5F8E0298AA83900B5C7EF /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		4D1ADDFA29926BB8001783C3 /* UserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
+		4D1ADE1D29928A1F001783C3 /* UserDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewCell.swift; sourceTree = "<group>"; };
+		4D1ADE1F29928A34001783C3 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		4DB5F8D4298AA83800B5C7EF /* TestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB5F8D7298AA83800B5C7EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB5F8D9298AA83800B5C7EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1ADE1C299289E3001783C3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4D1ADE1D29928A1F001783C3 /* UserDetailsViewCell.swift */,
+				4D1ADE1F29928A34001783C3 /* BaseTableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4DB5F8CB298AA83800B5C7EF = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		4DB5F8EC298AA86E00B5C7EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D1ADE1C299289E3001783C3 /* Cell */,
 				4DB5F8F5298AA8E900B5C7EF /* HomeView.swift */,
 				4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */,
 			);
@@ -248,8 +262,10 @@
 				4DB5F8D8298AA83800B5C7EF /* AppDelegate.swift in Sources */,
 				4DB5F8F6298AA8E900B5C7EF /* HomeView.swift in Sources */,
 				4DB5F900298D33E800B5C7EF /* UserData.swift in Sources */,
+				4D1ADE1E29928A1F001783C3 /* UserDetailsViewCell.swift in Sources */,
 				4DB5F8DA298AA83800B5C7EF /* SceneDelegate.swift in Sources */,
 				4DB5F90829911B6400B5C7EF /* UIImageView+Extension.swift in Sources */,
+				4D1ADE2029928A34001783C3 /* BaseTableCell.swift in Sources */,
 				4DB5F8FB298AA99E00B5C7EF /* BaseView.swift in Sources */,
 				4DB5F8F8298AA92100B5C7EF /* UIView+Extension.swift in Sources */,
 				4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */,

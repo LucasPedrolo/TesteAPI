@@ -9,6 +9,18 @@ import UIKit
 
 class UserDetailsView: BaseView {
     
+    let cellID = "cellID"
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UserDetailsViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.layer.cornerRadius = 5
+        tableView.layer.borderWidth = 2
+        tableView.layer.borderColor = UIColor(red: 86, green: 86, blue: 86).cgColor
+        tableView.backgroundColor = UIColor(red: 10, green: 25, blue: 36)
+        return tableView
+    }()
+    
     lazy var view: UIView = {
         let view = UIView()
         let color = UIColor(red: 10, green: 25, blue: 36)
@@ -36,7 +48,7 @@ class UserDetailsView: BaseView {
     
     lazy var loginLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = UIColor.systemGray2
         
         return label
     }()
@@ -44,6 +56,7 @@ class UserDetailsView: BaseView {
     lazy var reposLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
+        label.text = "Repositories"
         
         return label
     }()
@@ -107,6 +120,7 @@ class UserDetailsView: BaseView {
         stackView.addArrangedSubview(followersButton)
         stackView.addArrangedSubview(pointLabel)
         stackView.addArrangedSubview(followingButton)
+        view.addSubview(tableView)
     }
     
     override func setConstraints() {
@@ -122,5 +136,9 @@ class UserDetailsView: BaseView {
         editButton.anchor(top: loginLabel.bottomAnchor, leading: loginLabel.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 15, left: 0, bottom: 0, right: 0), size: .init(width: 300, height: 35))
         
         stackView.anchor(top: editButton.bottomAnchor, leading: editButton.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 12, left: 0, bottom: 0, right: 0), size: .init(width: 210, height: 20))
+        
+        tableView.anchor(top: stackView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 50, left: 10, bottom: 0, right: 10), size: .init(width: stackView.frame.width, height: 230))
+        
+        reposLabel.anchor(top: nil, leading: tableView.leadingAnchor, bottom: tableView.topAnchor, trailing: nil, padding: .init(top: 0, left: 7, bottom: 8, right: 0), size: .init(width: 200, height: 17))
     }
 }

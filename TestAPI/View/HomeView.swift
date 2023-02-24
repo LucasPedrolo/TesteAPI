@@ -20,6 +20,7 @@ class HomeView: BaseView {
     lazy var searchTxtField: UITextField = {
         let search = UITextField()
         search.placeholder = "Search"
+        search.text = ""
         search.borderStyle = UITextField.BorderStyle.roundedRect
         search.autocorrectionType = UITextAutocorrectionType.no
         search.keyboardType = UIKeyboardType.default

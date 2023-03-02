@@ -21,14 +21,14 @@ class UserDetailsViewCell: BaseTableCell {
         test.layer.cornerRadius = 2
         test.layer.borderWidth = 1
         test.layer.borderColor = UIColor(red: 86, green: 86, blue: 86).cgColor
-        test.backgroundColor = UIColor(red: 10, green: 25, blue: 36)
+        test.backgroundColor = UIColor(red: 13, green: 20, blue: 24)
         return test
     }()
     
     lazy var subjectLabel: UILabel = {
         let subject = UILabel()
         subject.text = ""
-        subject.textColor = .systemBlue
+        subject.textColor = UIColor(red: 104, green: 154, blue: 243)
         subject.font = UIFont.systemFont(ofSize: 15)
         subject.layer.cornerRadius = 2
         return subject
@@ -57,7 +57,7 @@ class UserDetailsViewCell: BaseTableCell {
         label.textColor = UIColor.systemGray2
         label.font = UIFont.systemFont(ofSize: 12)
         label.layer.cornerRadius = 10
-        label.layer.borderWidth = 0.5
+        label.layer.borderWidth = 0.25
         label.layer.borderColor = UIColor.systemGray2.cgColor
         label.textAlignment = .center
         return label

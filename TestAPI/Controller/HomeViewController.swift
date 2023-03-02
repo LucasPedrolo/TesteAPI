@@ -14,6 +14,10 @@ class HomeViewController: UIViewController {
         view = homeView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.backgroundColor = .white
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

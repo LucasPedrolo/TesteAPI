@@ -8,8 +8,7 @@
 import UIKit
 
 class UserDetailsViewController: UIViewController {
-    
-    var userDetailsView: UserDetailsView = UserDetailsView()
+    var customView: UserDetailsView = UserDetailsView()
     var homeData: UserData?
     var repos: [UserRepos] = []
     
@@ -23,35 +22,64 @@ class UserDetailsViewController: UIViewController {
     }
     
     override func loadView() {
-        view = userDetailsView
+        view = customView
     }
     
     override func viewWillAppear(_ animated: Bool) {
         API.shared.getRepos(url: self.homeData?.reposUrl ?? "") { repositories in
             DispatchQueue.main.async {
                 self.repos = repositories
-                self.userDetailsView.tableView.reloadData()
+                self.customView.tableView.reloadData()
             }
         }
+        navigationController?.navigationBar.backgroundColor = UIColor(red: 13, green: 20, blue: 24)
+        navigationController?.navigationBar.tintColor = UIColor(red: 104, green: 154, blue: 243)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelData()
-        userDetailsView.tableView.delegate = self
-        userDetailsView.tableView.dataSource = self
-        view.backgroundColor = UIColor(red: 10, green: 25, blue: 36)
-        navigationController?.navigationBar.backgroundColor = UIColor(red: 10, green: 25, blue: 36)
-        navigationController?.navigationBar.tintColor = UIColor(red: 255, green: 255, blue: 255)
+        addTarget()
+        customView.tableView.delegate = self
+        customView.tableView.dataSource = self
+        view.backgroundColor = UIColor(red: 13, green: 20, blue: 24)
     }
     
     func labelData() {
-        userDetailsView.image.load(urlString: String(homeData?.avatarUrl ?? ""))
-        userDetailsView.nameLabel.text = "\(String(homeData?.name ?? ""))"
-        userDetailsView.followingButton.setTitle("\(String(homeData?.following ?? 0)) Following", for: .normal)
-        userDetailsView.followersButton.setTitle("\(String(homeData?.followers ?? 0)) Followers", for: .normal)
-        userDetailsView.loginLabel.text = "\(String(homeData?.login ?? ""))"
+        customView.image.load(urlString: String(homeData?.avatarUrl ?? ""))
+        customView.nameLabel.text = "\(String(homeData?.name ?? ""))"
+        customView.followingButton.setTitle("\(String(homeData?.following ?? 0)) following", for: .normal)
+        customView.followersButton.setTitle("\(String(homeData?.followers ?? 0)) followers", for: .normal)
+        customView.loginLabel.text = "\(String(homeData?.login ?? ""))"
     }
+    
+    func addTarget() {
+        customView.followersButton.addTarget(self, action: #selector(goFollowers), for: .touchUpInside)
+        customView.followingButton.addTarget(self, action: #selector(goFollowing), for: .touchUpInside)
+        customView.followButton.addTarget(self, action: #selector(goFollow), for: .touchUpInside)
+    }
+    
+    @objc func goFollowers() {
+        if let home = homeData {
+            let followersPageViewController = FollowersPageViewController(userData: home)
+            self.navigationController?.pushViewController(followersPageViewController, animated: true)
+        }
+    }
+    
+    @objc func goFollowing() {
+        if let home = homeData{
+            let followingPageViewController = FollowingPageViewController(userData: home)
+            self.navigationController?.pushViewController(followingPageViewController, animated: true)
+        }
+    }
+    
+    @objc func goFollow() {
+        if let home = homeData{
+            let followPageViewController = FollowPageViewController(userData: home)
+            self.navigationController?.pushViewController(followPageViewController, animated: true)
+        }
+    }
+
 }
 
 extension UserDetailsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -62,16 +90,16 @@ extension UserDetailsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: userDetailsView.cellID, for: indexPath) as! UserDetailsViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: customView.cellID, for: indexPath) as! UserDetailsViewCell
         cell.repos = repos[indexPath.item]
         
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let gradeDetailViewController = GradeDetailsViewController(registerGrade: grades[indexPath.row])
-//        self.navigationController?.pushViewController(gradeDetailViewController, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let reposPageViewController = ReposPageViewController(userRepos: repos[indexPath.row])
+        self.navigationController?.pushViewController(reposPageViewController, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

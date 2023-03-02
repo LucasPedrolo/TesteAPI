@@ -13,7 +13,6 @@ class HomeView: BaseView {
         let image = UIImageView()
         image.image = UIImage(named: "gitIcon")
         image.contentMode = .scaleAspectFit
-        
         return image
     }()
     
@@ -28,10 +27,9 @@ class HomeView: BaseView {
         search.clearButtonMode = UITextField.ViewMode.whileEditing
         search.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         search.autocapitalizationType = .none
-        
         return search
     }()
-
+    
     lazy var searchButton: UIButton = {
         let search = UIButton(type: .custom)
         search.setTitle("Search", for: .normal)
@@ -42,7 +40,6 @@ class HomeView: BaseView {
         search.layer.cornerRadius = 20
         search.layer.borderWidth = 2
         search.backgroundColor = .black
-        
         return search
     }()
     

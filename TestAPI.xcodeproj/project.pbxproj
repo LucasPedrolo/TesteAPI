@@ -24,6 +24,14 @@
 		4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */; };
 		4DB5F90829911B6400B5C7EF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */; };
 		4DB5F90A299120F000B5C7EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5F909299120F000B5C7EF /* UIColor+Extension.swift */; };
+		4DC9A60F29ACE05C00C93016 /* ReposPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A60E29ACE05C00C93016 /* ReposPageViewController.swift */; };
+		4DC9A61129ACE08A00C93016 /* ReposPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61029ACE08A00C93016 /* ReposPageView.swift */; };
+		4DC9A61329ACEC5F00C93016 /* FollowingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61229ACEC5F00C93016 /* FollowingPageViewController.swift */; };
+		4DC9A61529ACEC7F00C93016 /* FollowersPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61429ACEC7F00C93016 /* FollowersPageViewController.swift */; };
+		4DC9A61729ACEC9C00C93016 /* FollowersPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61629ACEC9C00C93016 /* FollowersPageView.swift */; };
+		4DC9A61929ACECC100C93016 /* FollowingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61829ACECC100C93016 /* FollowingPageView.swift */; };
+		4DC9A61B29ACF42900C93016 /* FollowPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61A29ACF42900C93016 /* FollowPageViewController.swift */; };
+		4DC9A61D29ACF44C00C93016 /* FollowPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9A61C29ACF44C00C93016 /* FollowPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		4DB5F90729911B6400B5C7EF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		4DB5F909299120F000B5C7EF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4DC9A60E29ACE05C00C93016 /* ReposPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposPageViewController.swift; sourceTree = "<group>"; };
+		4DC9A61029ACE08A00C93016 /* ReposPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposPageView.swift; sourceTree = "<group>"; };
+		4DC9A61229ACEC5F00C93016 /* FollowingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingPageViewController.swift; sourceTree = "<group>"; };
+		4DC9A61429ACEC7F00C93016 /* FollowersPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersPageViewController.swift; sourceTree = "<group>"; };
+		4DC9A61629ACEC9C00C93016 /* FollowersPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersPageView.swift; sourceTree = "<group>"; };
+		4DC9A61829ACECC100C93016 /* FollowingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingPageView.swift; sourceTree = "<group>"; };
+		4DC9A61A29ACF42900C93016 /* FollowPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowPageViewController.swift; sourceTree = "<group>"; };
+		4DC9A61C29ACF44C00C93016 /* FollowPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,10 @@
 			children = (
 				4DB5F8F3298AA8BA00B5C7EF /* HomeViewController.swift */,
 				4DB5F903298D70F500B5C7EF /* UserDetailsViewController.swift */,
+				4DC9A60E29ACE05C00C93016 /* ReposPageViewController.swift */,
+				4DC9A61229ACEC5F00C93016 /* FollowingPageViewController.swift */,
+				4DC9A61429ACEC7F00C93016 /* FollowersPageViewController.swift */,
+				4DC9A61A29ACF42900C93016 /* FollowPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +137,10 @@
 				4D1ADE1C299289E3001783C3 /* Cell */,
 				4DB5F8F5298AA8E900B5C7EF /* HomeView.swift */,
 				4DB5F905298D714B00B5C7EF /* UserDetailsView.swift */,
+				4DC9A61029ACE08A00C93016 /* ReposPageView.swift */,
+				4DC9A61629ACEC9C00C93016 /* FollowersPageView.swift */,
+				4DC9A61829ACECC100C93016 /* FollowingPageView.swift */,
+				4DC9A61C29ACF44C00C93016 /* FollowPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,17 +282,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC9A61129ACE08A00C93016 /* ReposPageView.swift in Sources */,
+				4DC9A61329ACEC5F00C93016 /* FollowingPageViewController.swift in Sources */,
 				4DB5F904298D70F500B5C7EF /* UserDetailsViewController.swift in Sources */,
 				4DB5F8D8298AA83800B5C7EF /* AppDelegate.swift in Sources */,
+				4DC9A61929ACECC100C93016 /* FollowingPageView.swift in Sources */,
 				4DB5F8F6298AA8E900B5C7EF /* HomeView.swift in Sources */,
+				4DC9A61529ACEC7F00C93016 /* FollowersPageViewController.swift in Sources */,
 				4DB5F900298D33E800B5C7EF /* UserData.swift in Sources */,
 				4D1ADE1E29928A1F001783C3 /* UserDetailsViewCell.swift in Sources */,
 				4DB5F8DA298AA83800B5C7EF /* SceneDelegate.swift in Sources */,
 				4DB5F90829911B6400B5C7EF /* UIImageView+Extension.swift in Sources */,
+				4DC9A60F29ACE05C00C93016 /* ReposPageViewController.swift in Sources */,
 				4D1ADE2029928A34001783C3 /* BaseTableCell.swift in Sources */,
 				4DB5F8FB298AA99E00B5C7EF /* BaseView.swift in Sources */,
+				4DC9A61D29ACF44C00C93016 /* FollowPageView.swift in Sources */,
+				4DC9A61B29ACF42900C93016 /* FollowPageViewController.swift in Sources */,
 				4DB5F8F8298AA92100B5C7EF /* UIView+Extension.swift in Sources */,
 				4DB5F906298D714B00B5C7EF /* UserDetailsView.swift in Sources */,
+				4DC9A61729ACEC9C00C93016 /* FollowersPageView.swift in Sources */,
 				4DB5F90A299120F000B5C7EF /* UIColor+Extension.swift in Sources */,
 				4DB5F8F4298AA8BA00B5C7EF /* HomeViewController.swift in Sources */,
 				4D1ADDFB29926BB8001783C3 /* UserRepos.swift in Sources */,

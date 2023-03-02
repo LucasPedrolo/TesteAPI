@@ -8,6 +8,7 @@
 import Foundation
 
 struct UserRepos: Codable {
-    var name: String
-    var language: String
+    var name: String?
+    var language: String?
+    var fullName: String?
 }
